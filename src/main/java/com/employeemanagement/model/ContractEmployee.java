@@ -7,6 +7,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The {@code ContractEmployee} class represents employees hired on a contractual basis.
+ * It extends the {@code Employee} class and includes specific attributes like contractDurationInMonths.
+ *
+ * <p>Attributes:
+ * - contractDurationInMonths: The duration of the contract of employee in months.
+ * - agencyName: Agency name which provide this employee on contract basis
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "contract_employees")
 public class ContractEmployee extends Employee {
-    
+
     private Integer contractDurationInMonths;
     private String agencyName;
 }

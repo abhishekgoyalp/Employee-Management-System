@@ -7,6 +7,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The {@code PermanentEmployee} class represents employees who are on permanent payroll.
+ * It extends the {@code Employee} class and adds specific attributes such as bonus and leaveBalance.
+ *
+ * <p>Attributes:
+ * - bonus: The bonus amount assigned to the permanent employee.
+ * - leaveBalance: The Leave Balance quota available
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor

@@ -12,8 +12,8 @@ Ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/employee-management.git
-cd employee-management
+git clone https://github.com/abhishekgoyalp/Employee-Management-System.git
+cd Employee-Management-System
 ```
 
 ### 2. Configure the Database
@@ -36,7 +36,7 @@ mvn clean install
 ```
 
 ### 4. Run the Application
-Start the application with:
+By default, It will run on localhost with port 8080. If you want to run it on another port just add one property(`server.port=your_port`) in `application.properties` file. Start the application with:
 ```bash
 mvn spring-boot:run
 ```

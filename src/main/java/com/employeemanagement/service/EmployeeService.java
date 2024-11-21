@@ -10,6 +10,21 @@ import com.employeemanagement.model.Employee;
 import com.employeemanagement.model.PermanentEmployee;
 import com.employeemanagement.repository.EmployeeRepository;
 
+/**
+ * The {@code EmployeeService} class contains business logic for managing employees.
+ * It acts as a bridge between the controller layer and the repository layer.
+ *
+ * <p>Responsibilities:
+ * - Retrieve, create, update, and delete employee records.
+ * - Handle specific logic for different employee types.
+ *
+ * Methods:
+ * - getAllEmployees(): Fetches all employees.
+ * - getEmployeeById(Long id): Fetches a single employee by ID.
+ * - createEmployee(Employee employee): Adds a new employee to the database.
+ * - updateEmployee(Long id, Employee updatedEmployee): Updates an employee record.
+ * - deleteEmployee(Long id): Deletes an employee by ID.
+ */
 @Service
 public class EmployeeService<T extends Employee> {
     private final EmployeeRepository<T> employeeRepository;

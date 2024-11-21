@@ -15,6 +15,29 @@ import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+
+/**
+ * The {@code Employee} class serves as the base entity for all types of employees.
+ * It contains common attributes shared by all employee types and is mapped to
+ * a single table using JPA inheritance.
+ *
+ * <p>This class is abstract and cannot be instantiated directly. It is extended
+ * by {@code PermanentEmployee} and {@code ContractEmployee}.
+ *
+ * Attributes:
+ * - id: Unique identifier for the employee.
+ * - name: Name of the employee.
+ * - email: Email address of the employee.
+ * - department: Department to which the employee belongs.
+ *
+ * Inheritance Strategy:
+ * - Mapped as a single table for performance optimization.
+ */
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,      // Include type information as a property
     include = JsonTypeInfo.As.PROPERTY,
@@ -24,10 +47,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
     @JsonSubTypes.Type(value = PermanentEmployee.class, name = "permanent"),
     @JsonSubTypes.Type(value = ContractEmployee.class, name = "contract")
 })
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 @Table(name = "employees")
