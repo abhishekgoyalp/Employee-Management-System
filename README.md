@@ -60,5 +60,4 @@ mvn test
 - **CRUD Operations**: Create, Read, Update, and Delete employees.
 - **Polymorphism**: Handle multiple employee types (`PermanentEmployee` and `ContractEmployee`).
 - **Database Interaction**: Uses PostgreSQL (or MySQL) with Hibernate ORM.
-- **Swagger API Documentation**: Test and explore APIs via Swagger UI.
 - **Unit Tests**: JUnit-based test cases for validation and business logic.
