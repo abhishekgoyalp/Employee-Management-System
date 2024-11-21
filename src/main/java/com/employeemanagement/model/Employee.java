@@ -18,8 +18,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * The {@code Employee} class serves as the base entity for all types of employees.
- * It contains common attributes shared by all employee types and is mapped to
- * a single table using JPA inheritance.
+ * It contains common attributes shared by all employee types.
  *
  * <p>This class is abstract and cannot be instantiated directly. It is extended
  * by {@code PermanentEmployee} and {@code ContractEmployee}.
@@ -28,10 +27,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
  * - id: Unique identifier for the employee.
  * - name: Name of the employee.
  * - email: Email address of the employee.
- * - department: Department to which the employee belongs.
+ * - salary: Salary of the employee.
  *
- * Inheritance Strategy:
- * - Mapped as a single table for performance optimization.
  */
 
 @Getter
