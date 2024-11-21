@@ -59,5 +59,5 @@ mvn test
 ## Features
 - **CRUD Operations**: Create, Read, Update, and Delete employees.
 - **Polymorphism**: Handle multiple employee types (`PermanentEmployee` and `ContractEmployee`).
-- **Database Interaction**: Uses PostgreSQL (or MySQL) with Hibernate ORM.
+- **Database Interaction**: Uses MySQL with Hibernate ORM.
 - **Unit Tests**: JUnit-based test cases for validation and business logic.
